@@ -8,22 +8,58 @@
     <link rel="stylesheet" href="http://bootswatch.com/cyborg/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
+    <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+    <script src="https://use.fonticons.com/ffe176a3.js"></script>
     <style>
     .movies ul {
-      display:flex;
-      flex-wrap: wrap;
-      list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
     }
+    
     .movies ul li {
-      margin: 10px;
-      width: 150px;
+        margin: 10px 33px;
+        width: 150px;
     }
-  </style>
+    
+    .movies img {
+        -webkit-border-radius: 10px 10px 10px 10px;
+        border-radius: 10px 10px 10px 10px;
+    }
+    
+    .movies p {
+        -webkit-border-radius: 10px 10px 10px 10px;
+        border-radius: 10px 10px 10px 10px;
+        border: 2.5px dotted #1C8EFF;
+        background-color: #000;
+        color: #fff;
+        padding: 5px;
+        top: -70px;
+        left: -17px;
+        position: relative;
+    }
+    
+    h2 {
+        -webkit-border-radius: 10px 10px 10px 10px;
+        border-radius: 10px 10px 10px 10px;
+        border: 2.5px dotted #1C8EFF;
+        text-align: right;
+        padding: 8px;
+        background-color: #000;
+    }
+    
+    i.fa.fa-ticket.fa-2x {
+        padding: 7px;
+        position: relative;
+        left: 20px;
+        top: -13px;
+    }
+    </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="header clearfix">
+        <div class="header">
             <nav class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container">
                     <div class="navbar-header">
@@ -33,11 +69,11 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">MAapp</a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <nav>
                             <ul class="nav nav-pills">
+                                <li><a class="navbar-brand" href="#"><i class="fa fa-ticket fa-2x" aria-hidden="true"></i></a></li>
                                 <li role="presentation"><a href="#/nowPlaying">Now Playing</a></li>
                                 <li role="presentation"><a href="#/popular">Popular</a></li>
                                 <li role="presentation"><a href="#/topRated">Top Rated</a></li>
@@ -50,7 +86,7 @@
             </nav>
         </div>
         <!-- Main jumbotron for a primary marketing message or call to action -->
-        <main class="movies"  ng-view></main>
+        <main class="movies" ng-view></main>
         <hr>
         <footer>
             <p>&copy; 2016 Company, Inc.</p>
